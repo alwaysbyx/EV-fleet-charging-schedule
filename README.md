@@ -4,5 +4,5 @@ We denote arrival time solution $y \in \mathbb{R^{e-s+1}}$ to represent fraction
 ##
 - gradient_descent_concrete.py: using the concrete form to update arrival time $y$.
 - gradient_descent_diagram.py: using the diagram:
-	- allocate arrival time for each vehicle using $y \rightarrow$ no grad
+	- allocate arrival time for each vehicle using $y \rightarrow$ <span style="color: red">no grad</span>
 	- allocate charging 
