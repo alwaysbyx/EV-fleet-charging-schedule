@@ -64,8 +64,6 @@ class model_arrival(nn.Module):
                 # record s
                 self.energy = np.round(energy.detach().numpy(),2)
                 self.stay = np.round(stay.detach().numpy(),2)
-                self.n_plot = np.concatenate((np.zeros(s), n.detach().numpy()),axis=0)
-                self.y_plot = np.concatenate((np.zeros(s), y.detach().numpy(), np.zeros(T-e)),axis=0)
                 return  - (energy - self.balanced_factor * stay)
             else:
                 t = depart[i]
@@ -99,7 +97,6 @@ if __name__ == "__main__":
             plt.pause(0.0001)
             anno.remove()
             axes[0].clear()
-            
     anno = plt.annotate('step:%d'%i, xy=(0.85, 0.9), xycoords='axes fraction',color='black')
     plt.pause(0)
 
